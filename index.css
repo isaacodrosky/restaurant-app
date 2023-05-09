@@ -79,9 +79,10 @@ header h1 {
 
 .item-container button {
     background: none;
+    font-size: 1.5rem;
     padding: 5px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     line-height: 10px;
     border: 2px solid;
     border-radius: 50%;
@@ -227,10 +228,6 @@ header h1 {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-}
-
-.checkout-modal input[type=number] {
-    -moz-appearance: none;
 }
 
 form button {
