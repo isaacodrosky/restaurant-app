@@ -1,0 +1,70 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+       <!-- css -->
+       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/headerimg.jpg" alt="colorful bubble tea drinks in a row">
+            <h1>Boba & Bites</h1>
+        </header>
+        
+        <div id="menu-container" class="menu-container">
+        
+            <!-- menu items render here -->
+        
+        </div>
+        
+        <div id="order-container" class="order-container">
+            <h2 class="order-header">Your Order</h2>
+            <div id="order-items">
+                
+                <!-- ordered items render here -->
+            
+            </div>
+            <div id="checkout-container" class="checkout-container">
+                <div class="space-between total-container">
+                    <p>Total price:</p>
+                    <p id="total-price"></p>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Complete order</button>
+            </div>
+        </div>
+        
+        <div id="checkout-modal" class="checkout-modal">
+            <button class="modal-close-btn" id="modal-close-btn">&#10006;</button>
+            <h2>Enter payment details</h2>
+            <form method="POST">
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    aria-label="Full name"
+                    placeholder="Full name"
+                    required>
+                <input
+                    type="number"
+                    name="card"
+                    id="card"
+                    aria-label="Card number"
+                    placeholder="Card number"
+                    required>
+                <input
+                    type="number"
+                    name="cvv"
+                    id="cvv"
+                    aria-label="CVV"
+                    placeholder="CVV"
+                    required>
+                <button type="submit" id="payment-btn">Submit payment</button>
+            </form>
+        </div>
+            
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+

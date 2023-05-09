@@ -1,0 +1,257 @@
+:root {
+    --pink: rgb(250, 202, 199);
+    --dk-pink: rgb(252, 168, 162);
+    --transition: all ease 400ms;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-color: #000;
+    color: var(--pink);
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+header img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+
+header h1 {
+    width: 70%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: 4px solid #000;
+    color: #000;
+}
+
+/* menu items */
+
+.menu-container {
+    margin: 15px;
+}
+
+.menu-container .item-container {
+    padding: 8px 0;
+    border-bottom: 1px solid #333; 
+}
+
+.item-container h3 {
+    margin: 3px 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.item-container p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    font-weight: 200;
+}
+
+.item-container p:nth-child(n + 3) {
+    font-weight: 400;
+}
+
+.item-container button {
+    background: none;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: var(--pink);
+    font-weight: 200;
+    transition: var(--transition);
+}
+
+.item-container button:hover,
+.item-container button:active {
+    color: var(--dk-pink);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+/* order details */
+
+.order-container {
+    display: none;
+    margin: 20px 15px;
+}
+
+.order-container h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.order-item {
+    border-bottom: 1px solid #333;
+}
+
+.order-item div {
+    display: flex;
+    align-items: baseline;
+    margin: 8px 0;
+}
+
+.order-item h3 {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    color: var(--dk-pink);
+    transition: var(--transition);
+}
+
+.remove-btn:hover,
+.remove-btn:active {
+    color: var(--pink);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+.total-container {
+    margin: 10px auto;
+    font-weight: 700;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 6px 0;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pink);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.checkout-btn:hover,
+.checkout-btn:active {
+    background-color: rgb(252, 168, 162);
+    transform: scale(1.01);
+    transition: var(--transition);
+}
+
+/* checkout modal */
+
+.checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 999;
+    background-color: var(--dk-pink);
+    width: 85%;
+    height: fit-content;
+    box-shadow: 0 0 40px #000;
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.modal-close-btn {
+    font-size: 1.4rem;
+    color: #333;
+    background-color: var(--dk-pink);
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 5px;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active {
+    transform: scale(1.1);
+    color: #000;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.checkout-modal h2 {
+    color: #333;
+    margin: 10px auto;
+}
+
+.checkout-modal input {
+    width: 90%;
+    border: none;
+    margin: 10px auto;
+    font-family: inherit;
+    background-color: var(--pink);
+    padding: 10px;
+}
+
+/* hide number up/down arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.checkout-modal input[type=number] {
+    -moz-appearance: none;
+}
+
+form button {
+    width: 90%;
+    border: 3px solid #333;
+    background-color: var(--dk-pink);
+    color: #333;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 5px;
+    margin: 10px auto;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+form button:hover,
+form button:active {
+    color: #000;
+    border-color: #000;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: var(--transition);
+}
